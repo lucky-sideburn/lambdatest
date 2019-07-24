@@ -6,4 +6,4 @@ phases:
       - mkdir build
       - cd src/hello-world
       - pip install -r requirements.txt --target ./
-      - zip -r ../build/foo.zip ./
+      - zip -r ../../build/foo.zip ./
