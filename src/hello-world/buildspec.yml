@@ -1,0 +1,13 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - pip install -r requirements.txt
+  pre_build:
+    commands:
+      - echo "fooo"
+  build:
+    commands:
+      - echo "fooo"
+      - exit $?
