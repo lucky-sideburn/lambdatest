@@ -1,14 +1,8 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - cd src/hello-world
-      - pip install -r requirements.txt
-  pre_build:
-    commands:
-      - echo "fooo"
   build:
     commands:
-      - echo "fooo"
-      - exit $?
+      - cd src/hello-world
+      - pip install -r requirements.txt --target ./
+      - zip -r foo.zip ./
