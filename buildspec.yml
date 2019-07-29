@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - mkdir build
-      - pip install -r requirements.txt --target src/hello-world
+      - pip install -r src/hello-world/requirements.txt --target src/hello-world
       - zip -r build/foo.zip src/hello-world
 artifacts:
   files:
