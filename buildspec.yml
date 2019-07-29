@@ -4,9 +4,9 @@ phases:
   build:
     commands:
       - mkdir build
-      - pip install -r src/hello-world/requirements.txt --target src/hello-world
-      - zip -r build/foo.zip src/hello-world
+      - pip install -r src/${PROJECT_NAME}/requirements.txt --target src/${PROJECT_NAME}
+      - zip -r build/${PROJECT_NAME}.zip src/${PROJECT_NAME}
 artifacts:
   files:
-    - 'build/*.zip'
-  name: foo-$(date +%Y-%m-%d) 
+    - "build/${PROJECT_NAME}.zip"
+  name: "${PROJECT_NAME}-$(date +%Y-%m-%d)"
