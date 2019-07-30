@@ -5,7 +5,7 @@ phases:
     commands:
       - mkdir build
       - pip install -r src/hello-world/requirements.txt --target src/hello-world
-      - zip -r build/foo.zip src/hello-world
+      - zip -r build/foo-$(git rev-parse --short HEAD).zip src/hello-world
       - env
 artifacts:
   files:
