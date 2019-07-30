@@ -6,6 +6,7 @@ phases:
       - mkdir build
       - pip install -r src/hello-world/requirements.txt --target src/hello-world
       - zip -r build/foo-$(git rev-parse --short HEAD).zip src/hello-world
+      - SOURCE="foo-$(git rev-parse --short HEAD).zip" && cp build/$SOURCE build/foo-$(shasum -a 256 $SOURCE | xxd -r -p | base64).zip
       - env
 artifacts:
   files:
